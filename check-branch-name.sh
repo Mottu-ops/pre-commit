@@ -9,5 +9,5 @@ if [[ ! $local_branch_name =~ $valid_branch_regex ]]; then
     tput setaf 1; echo "$message"
     exit 1
 fi
-tput setaf 1; echo "Correct branch name!"
+tput setaf 2; echo "Correct branch name!"
 exit 0
