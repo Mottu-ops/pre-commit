@@ -7,7 +7,9 @@ message="There is something wrong with your branch name. Branch names in this pr
 
 if [[ ! $local_branch_name =~ $valid_branch_regex ]]; then
     tput setaf 1; echo "$message"
+    tput sgr0
     exit 1
 fi
 tput setaf 2; echo "Correct branch name!"
+tput sgr0
 exit 0
