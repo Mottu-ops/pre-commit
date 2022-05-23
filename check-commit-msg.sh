@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-local_commit_msg="$(git log -1 --pretty=%B)"
+
+message_file = ARGV[0]
+local_commit_msg = File.read(message_file)
 
 valid_commit_regex='(#[0-9]+ \[(fix|feat|chore|style|perf|build|refactor|test|docs)+\] - [a-zA-Z])'
 
