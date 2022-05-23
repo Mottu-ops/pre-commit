@@ -7,7 +7,7 @@ message="There is something wrong with your commit $local_commit. Commits in thi
 
 if  [[ ! $local_commit =~ $valid_commit_regex ]]; then
     tput setaf 1;
-    echo "$message" >&2
+    echo "$message"
     tput sgr0
     exit 1
 fi
