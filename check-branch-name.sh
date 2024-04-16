@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 local_branch_name="$(git rev-parse --abbrev-ref HEAD)"
 
-valid_branch_regex='^((feature|bug|us|hotfix|release|issue|poc|task)\/[0-9\-]+)|(main)|(develop)$'
+valid_branch_regex='^((feature|bug|us|hotfix|release|issue|poc|task|op)\/[0-9\-]+)|(main)|(develop)$'
 
 message="There is something wrong with your branch name. Branch names in this project must adhere to this contract: $valid_branch_regex. Your commit will be rejected. You should rename your branch to a valid name and try again."
 
