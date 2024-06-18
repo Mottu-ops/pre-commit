@@ -7,7 +7,7 @@ if (!arg) {
   process.exit(1);
 }
 const distPath = path.join(__dirname, `dist/${arg}`);
-const mainJsPattern = /^main\.[a-f0-9]+\.js$/;
+const mainJsPattern = /^main\.[a-z0-9]+\.js$/;
 
 function generateVersionFile() {
 	json = JSON.parse(fs.readFileSync('package.json', 'utf8'));
