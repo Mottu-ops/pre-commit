@@ -2,6 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 const arg = process.argv[2];
+if (!arg) {
+  console.error('O parâmetro está ausente');
+  process.exit(1);
+}
 const distPath = path.join(__dirname, `dist/${arg}`);
 const mainJsPattern = /^main\.[a-f0-9]+\.js$/;
 
