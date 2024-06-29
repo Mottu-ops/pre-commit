@@ -49,7 +49,6 @@ function updateIndexHtml(oldFileName) {
 }
 
 // Executando as funções
-generateVersionFile();
 const oldFileName = renameMainJs();
 updateIndexHtml(oldFileName);
 
