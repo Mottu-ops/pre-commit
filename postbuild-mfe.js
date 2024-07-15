@@ -9,16 +9,6 @@ if (!arg) {
 const distPath = path.join(__dirname, `dist/${arg}`);
 const mainJsPattern = /^main\.[a-z0-9]+\.js$/;
 
-function generateVersionFile() {
-	json = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-	version = json.version;
-
-	fs.writeFile(path.join(__dirname, `dist/${arg}/assets`, 'version.txt'), version, function(err) {
-		if (err) throw err;
-		console.log('Versão salva com sucesso!');
-	});
-}
-
 // Função para renomear o arquivo main.*.js para main.js
 function renameMainJs() {
 	const files = fs.readdirSync(distPath);
