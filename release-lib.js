@@ -3,8 +3,10 @@ const { exec, execSync } = require('child_process');
 const name = process.argv[2];
 const arg = process.argv[3] || 'patch';
 
+console.log("process", process.argv);
+
 if (!name) {
-	throw new Error('Error: output path is required');
+	throw new Error('Error: name is required');
 }
 
 if (arg === 'patch' || arg === 'minor' || arg === 'major' || arg === 'preminor' || arg === 'premajor' || arg === 'prepatch' || arg === 'prerelease') {
