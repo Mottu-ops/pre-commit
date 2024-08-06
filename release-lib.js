@@ -1,7 +1,7 @@
 const { exec, execSync } = require('child_process');
 
-const name = process.argv[1];
-const arg = process.argv[2] || 'patch';
+const name = process.argv[2];
+const arg = process.argv[3] || 'patch';
 
 if (!name) {
 	throw new Error('Error: output path is required');
