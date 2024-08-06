@@ -4,6 +4,7 @@ const name = process.argv[2];
 const arg = process.argv[3] || 'patch';
 
 console.log("process", process.argv);
+console.log(name, arg);
 
 if (!name) {
 	throw new Error('Error: name is required');
